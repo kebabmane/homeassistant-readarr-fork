@@ -1,11 +1,10 @@
 name: "Readarr"
 description: "Ebook and audiobook collection manager for Usenet and BitTorrent users"
-version: "1.0.4"
+version: "1.0.5"
 slug: "readarr"
 init: false
 hassio_api: true
 arch:
-  - aarch64
   - amd64
 ports:
   8787/tcp: 8787
