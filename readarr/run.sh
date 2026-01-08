@@ -4,20 +4,8 @@ set -e
 
 bashio::log.info "Starting Readarr addon..."
 
-# Ensure config directory exists and link to addon_config for persistence
-CONFIG_DIR="/addon_config/readarr"
-if [ ! -d "$CONFIG_DIR" ]; then
-    bashio::log.info "Creating config directory..."
-    mkdir -p "$CONFIG_DIR"
-fi
-
-# Symlink /config to persistent storage
-if [ ! -L "/config" ] || [ "$(readlink /config)" != "$CONFIG_DIR" ]; then
-    rm -rf /config
-    ln -s "$CONFIG_DIR" /config
-fi
-
-bashio::log.info "Config directory: $CONFIG_DIR"
+# /config is already mounted by HA as persistent storage (addon_config)
+bashio::log.info "Config directory: /config"
 
 # Get PUID/PGID from options (default to 0 for root)
 PUID=$(bashio::config 'PUID')
