@@ -1,6 +1,6 @@
 name: "Readarr"
 description: "Ebook and audiobook collection manager for Usenet and BitTorrent users"
-version: "1.0.0"
+version: "1.0.1"
 slug: "readarr"
 init: false
 arch:
@@ -26,4 +26,3 @@ options:
 schema:
   PUID: "int?"
   PGID: "int?"
-image: "ghcr.io/faustvii/readarr"
