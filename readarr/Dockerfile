@@ -13,6 +13,6 @@ LABEL \
     io.hass.description="Ebook and audiobook collection manager" \
     io.hass.arch="amd64" \
     io.hass.type="addon" \
-    io.hass.version="1.0.11"
+    io.hass.version="1.0.12"
 
 CMD ["/run.sh"]
