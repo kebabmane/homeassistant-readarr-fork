@@ -4,8 +4,7 @@ FROM $BUILD_FROM
 USER root
 
 # Install jq for parsing Home Assistant options
-RUN apt-get update && apt-get install -y --no-install-recommends jq \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache jq
 
 COPY --chmod=755 run.sh /
 
