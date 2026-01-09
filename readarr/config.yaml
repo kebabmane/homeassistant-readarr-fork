@@ -1,6 +1,6 @@
 name: "Readarr"
 description: "Ebook and audiobook collection manager for Usenet and BitTorrent users"
-version: "1.0.9"
+version: "1.0.10"
 slug: "readarr"
 init: false
 hassio_api: true
